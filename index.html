@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam Detector</title>
+</head>
+<body>
+    <h2>Spam Detection</h2>
+    <form method="POST">
+        <label for="message">Enter a message:</label><br>
+        <textarea name="message" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if prediction %}
+        <h3>Result: {{ prediction }}</h3>
+        <p>Spam Probability: {{ spam_prob }}</p>
+    {% endif %}
+</body>
+</html>
